@@ -9,14 +9,14 @@
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
         
         body {
-    font-family: 'cursive', sans-serif;
-    background: url('/static/section.webp') no-repeat center center fixed;
-    background-size: cover;
-    margin: 0;
-    padding: 20px;
-    transition: opacity 0.5s ease-in-out;
-    text-align: center;
-}
+            font-family: 'cursive', sans-serif;
+            background: url('/static/section.webp') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 20px;
+            transition: opacity 0.5s ease-in-out;
+            text-align: center;
+        }
 
         .container {
             background: #dec3c3;
@@ -24,7 +24,7 @@
             border-radius: 15px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             max-width: 500px;
-            margin: 20 ;
+            margin: 20px auto;
             text-align: center;
         }
         h1, h2 {
@@ -86,20 +86,32 @@
         .social-icons {
             display: flex;
             justify-content: center;
-            gap: 10px;
-            margin-top: 10px;
-            
+            gap: 20px;
+            margin-bottom: 20px;
         }
         .social-icons img {
             width: 60px;
             cursor: pointer;
         }
         .social-icons img[alt="IVIS_logo"] {
-    width: 100px; /* Adjust size for Instagram logo */
-}
+            width: 100px;
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #555;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
+    <div class="social-icons">
+        <img src="/static/NIE_University.png" alt="NIE_University">
+        <img src="/static/IVIS_logo.png" alt="IVIS_logo">
+        <img src="/static/PULSE LOGO.png" alt="PULSE">
+    </div>
+
     <div class="container" id="form-container">
         <img src="/static/logo.webp" alt="Logo" class="logo">
         <h1>🎨 Social Media Caption Generator 🎭</h1>
@@ -120,11 +132,6 @@
             
             <button type="submit">🚀 Generate Captions</button>
         </form>
-        <div class="social-icons">
-            <img src="/static/NIE_University.png" alt="NIE_University">
-            <img src="/static/IVIS_logo.png" alt="IVIS_logo" >
-            <img src="/static/PULSE LOGO.png" alt="PULSE">
-        </div>
     </div>
 
     <div class="container" id="results">
@@ -132,12 +139,11 @@
         <h2>Generated Captions</h2>
         <div class="caption-list" id="caption-list"></div>
         <button onclick="restartGenerator()">🔄 Generate Again</button>
-        <div class="social-icons">
-            <img src="/static/NIE_University.png" alt="NIE_University">
-            <img src="/static/IVIS_logo.png" alt="IVIS_logo" >
-            <img src="/static/PULSE LOGO.png" alt="PULSE">
-        </div>
     </div>
+
+    <footer>
+        Provided by IVIS Labs
+    </footer>
     
     <script>
         document.getElementById("caption-form").onsubmit = async function(event) {
